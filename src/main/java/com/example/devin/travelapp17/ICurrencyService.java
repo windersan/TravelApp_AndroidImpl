@@ -8,8 +8,11 @@ import java.util.List;
 
 public interface ICurrencyService {
     public CurrEntry create(CurrEntry currEntry);
+
     public List<CurrEntry> getAllCurrencies();
-    public CurrEntry update(CurrEntry currEntry_old, CurrEntry urrEntry_new);
-    public CurrEntry delete(CurrEntry currEntry);
+
+
+    public void delete(String currency);
+
 
 }

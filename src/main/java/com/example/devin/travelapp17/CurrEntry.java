@@ -10,19 +10,19 @@ public class CurrEntry implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private double _amount ;
+    private String _amount ;
     private String _currency;
 
     public CurrEntry(){}
-    public CurrEntry(double amount, String currency){
+    public CurrEntry(String amount, String currency){
         this._amount = amount;
         this._currency = currency;
     }
 
-    public double get_amount() {return _amount;}
+    public String get_amount() {return _amount;}
     public String get_currency(){return _currency;}
 
-    public void set_amount(double amount){this._amount = amount;}
+    public void set_amount(String amount){this._amount = amount;}
     public void set_currency(String currency){this._currency = currency;}
 
     @Override

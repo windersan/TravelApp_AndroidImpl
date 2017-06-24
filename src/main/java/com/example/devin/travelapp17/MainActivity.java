@@ -98,10 +98,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent1 = new Intent(MainActivity.this, PurchaseView.class);
             startActivity(intent1);
         }
-        else if(id == R.id.deposit){
-            Intent intent1 = new Intent(MainActivity.this, DepositView.class);
-            startActivity(intent1);
-        }
+
         else if(id == R.id.exchange){
             Intent intent1 = new Intent(MainActivity.this, ExchangeView.class);
             startActivity(intent1);

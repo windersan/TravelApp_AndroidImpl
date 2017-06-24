@@ -12,4 +12,8 @@
     <string name="title_activity_deposit">Deposit</string>
     <string name="title_activity_exchange">Exchange</string>
     <string name="title_activity_new_deposit">NewDeposit</string>
+
+    <string-array name="all">
+
+    </string-array>
 </resources>
