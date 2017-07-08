@@ -35,17 +35,11 @@ public class PurchaseView extends AppCompatActivity {
 
 
 
-
-
-
-
-               // CurrencySvcSioImpl svc = new CurrencySvcSioImpl(PurchaseView.this.getApplicationContext());
-
                 CurrencySvcSQLiteImpl svc = new CurrencySvcSQLiteImpl(PurchaseView.this.getApplicationContext());
 
                 EditText e1 = (EditText)findViewById(R.id.AmountText);
                 String amount_str = e1.getText().toString();
-               // double amount = Double.parseDouble(amount_str);
+
 
                 EditText e2 = (EditText)findViewById(R.id.CurrencyText);
                 String currency = e2.getText().toString();
@@ -57,7 +51,8 @@ public class PurchaseView extends AppCompatActivity {
                 for(int i = 0; i < s.size();i++){
 
 
-                    if(s.get(i).get_currency() == currency){
+                    if(s.get(i).get_currency().equals(currency)){
+
                         double amount1 = Double.parseDouble(amount_str);
                         double amount2 = Double.parseDouble(s.get(i).get_amount());
                         double amount = amount1 + amount2;
@@ -76,18 +71,10 @@ public class PurchaseView extends AppCompatActivity {
                 }
 
 
-                CurrEntry u = new CurrEntry(amount_str,currency);
-                CurrEntry u1 = svc.update(u);
-
-
-              //  CurrEntry u = new CurrEntry("100","Dollars");
 
                 List<CurrEntry> ss = svc.getAllCurrencies();
 
-                //svc.delete("Currency");
 
-
-              //  svc.update(u);
 
                 ArrayAdapter<CurrEntry> adapter = new ArrayAdapter<CurrEntry>(PurchaseView.this,
                         android.R.layout.simple_list_item_1, ss);
